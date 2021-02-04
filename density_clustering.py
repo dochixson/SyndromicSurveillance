@@ -20,7 +20,6 @@ import datetime
 from dateutil import parser
 import numpy as np
 import geopandas as gpd
-from dateutil import parser
 
 #accepts a csv file with headers lat,lon,date. maxdistance is the distance for a neighbor relation, minneighbors is the
 #minimum number of points for a cluster,start_date is the beginning date for grouping clusters by time (if None will automatically assign the first date from the dataset)
@@ -114,4 +113,4 @@ def runClusterAnalysis(datafile_in,maxdistance=100,minneighbors=2,start_date=Non
             gdf_line.to_file(datafile.replace('.csv','')+"_shapes_linestring_"+str(maxdistance)+"_"+str(minneighbors)+'.shp')
 
 #Test
-#runClusterAnalysis(r'E:/data-1590796735022.csv',maxdistance=1000,minneighbors=10)      
+#runClusterAnalysis(r'E:/data-1590796735022.csv',maxdistance=1000,minneighbors=10)
